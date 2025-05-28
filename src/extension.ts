@@ -197,11 +197,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.gitCommandPalette', async () => {
 		const gitCommands = [
-			'git remote add origin <url>',
-			'git branch -M main',
 			'gitt add .',
 			'git commit -m "Initial commit"',
 			'git push -u origin main',
+			'git init',
+			'git remote add origin <url>',
+			'git branch -M main',
 			'git pull',
 			'git checkout ',
 			'git log',
