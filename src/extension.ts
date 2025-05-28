@@ -184,7 +184,7 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 	}));
 
-	context.subscriptions.push(vscode.window.registerTerminalProfileProvider('terminalTest.terminal-profile', {
+	context.subscriptions.push(vscode.window.registerTerminalProfileProvider('GitTerminal.terminal-profile', {
 		provideTerminalProfile(_token: vscode.CancellationToken): vscode.ProviderResult<vscode.TerminalProfile> {
 			return {
 				options: {
@@ -195,7 +195,7 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	}));
 
-	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.gitCommandPalette', async () => {
+	context.subscriptions.push(vscode.commands.registerCommand('GitTerminal.gitCommandPalette', async () => {
 		const gitCommands = [
 			'gitt add .',
 			'git commit -m "Initial commit"',
