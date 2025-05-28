@@ -197,16 +197,17 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('terminalTest.gitCommandPalette', async () => {
 		const gitCommands = [
-			'git add .',
-			'git status',
-			'git commit -m ""',
-			'git push',
+			'git remote add origin <url>',
+			'git branch -M main',
+			'gitt add .',
+			'git commit -m "Initial commit"',
+			'git push -u origin main',
 			'git pull',
 			'git checkout ',
-			'git branch',
 			'git log',
 			'git diff',
-			'git reset --hard'
+			'git reset --hard',
+			'git status'
 		];
 		const selected = await vscode.window.showQuickPick(gitCommands, {
 			placeHolder: 'Wähle einen Git-Befehl aus'
