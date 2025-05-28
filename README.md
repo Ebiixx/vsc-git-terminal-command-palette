@@ -15,11 +15,14 @@ A handy command palette for common Git commands in the VS Code terminal.
 
 ## Installation
 
-1. Package the extension with [`vsce`](https://code.visualstudio.com/api/working-with-extensions/publishing-extension):
-   ```
-   vsce package
-   ```
-2. Install the generated `.vsix` file in VS Code:
+1. You can either:
+   - Package the extension yourself with [`vsce`](https://code.visualstudio.com/api/working-with-extensions/publishing-extension):
+     ```
+     vsce package
+     ```
+     and use the generated `.vsix` file,
+   - **or** download a prebuilt `.vsix` file in this repo.
+2. Install the `.vsix` file in VS Code:
    - `Ctrl+Shift+P` → **Extensions: Install from VSIX...** → select the file
 
 ## Example Commands
