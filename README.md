@@ -1,34 +1,35 @@
-# vscode-terminal-api-example
+# Git Command Palette
 
-This sample provides several commands that demonstrates how to utilize the integrated terminal extension API. Access the commands through the command palette (F1).
+A handy command palette for common Git commands in the VS Code terminal.
 
-![demo](demo.png)
+## Features
 
-## VS Code API
+- Open a palette with frequently used Git commands
+- Select a command and execute it directly in the integrated terminal
 
-### `vscode` module
+## Usage
 
-- [window.createTerminal](https://code.visualstudio.com/api/references/vscode-api#window.createTerminal)
-- [window.onDidChangeActiveTerminal](https://code.visualstudio.com/api/references/vscode-api#window.onDidChangeActiveTerminal)
-- [window.onDidCloseTerminal](https://code.visualstudio.com/api/references/vscode-api#window.onDidCloseTerminal)
-- [window.onDidOpenTerminal](https://code.visualstudio.com/api/references/vscode-api#window.onDidOpenTerminal)
-- [window.Terminal](https://code.visualstudio.com/api/references/vscode-api#window.Terminal)
-- [window.terminals](https://code.visualstudio.com/api/references/vscode-api#window.terminals) 
+1. Open the command palette (`Ctrl+Shift+P`)
+2. Search for **"Git Command Palette"**
+3. Select a Git command from the list – it will be sent to the terminal
 
-### Proposed API
+## Installation
 
-- `window.createTerminalRenderer`
-- `window.TerminalRenderer`
-- `window.registerTerminalProfileProvider`
+1. Package the extension with [`vsce`](https://code.visualstudio.com/api/working-with-extensions/publishing-extension):
+   ```
+   vsce package
+   ```
+2. Install the generated `.vsix` file in VS Code:
+   - `Ctrl+Shift+P` → **Extensions: Install from VSIX...** → select the file
 
-### Contribution Points
+## Example Commands
 
-- [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
-- [`contributes.terminal`](https://code.visualstudio.com/updates/v1_57#_terminal-profile-contributions)
+- `git status`
+- `git add .`
+- `git commit -m "Initial commit"`
+- `git push -u origin main`
+- and more
 
-## Running the Sample
+---
 
-- Run `npm install` in terminal to install dependencies
-- Run the `Run Extension` target in the Debug View. This will:
-	- Start a task `npm: watch` to compile the code
-	- Run the extension in a new VS Code window
+MIT License
