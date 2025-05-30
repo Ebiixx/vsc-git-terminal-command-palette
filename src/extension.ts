@@ -197,7 +197,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('GitTerminal.gitCommandPalette', async () => {
 		const gitCommands = [
-			'gitt add .',
+			'git add .',
 			'git commit -m "Initial commit"',
 			'git push -u origin main',
 			'git init',
